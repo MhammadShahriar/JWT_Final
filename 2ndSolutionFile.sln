@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35818.85 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFDE}") = "233323333", "WebApiForJWT.csproj", "{336854CE-227E-46F7-8DFF-EDD8A9DFEB4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ddddd", "WebApiForJWT.csproj", "{B771FBFE-E736-4B53-9E98-1FC91D6A7D0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{336854CE-227E-46F7-8DFF-EDD8A9DFEB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{336854CE-227E-46F7-8DFF-EDD8A9DFEB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{336854CE-227E-46F7-8DFF-EDD8A9DFEB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{336854CE-227E-46F7-8DFF-EDD8A9DFEB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B771FBFE-E736-4B53-9E98-1FC91D6A7D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B771FBFE-E736-4B53-9E98-1FC91D6A7D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B771FBFE-E736-4B53-9E98-1FC91D6A7D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B771FBFE-E736-4B53-9E98-1FC91D6A7D0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6D5D8963-0483-49C7-95A7-EC342AE4A6AE}
+		SolutionGuid = {BC5B7C33-D1FC-4FAE-91FF-C13A33478B8E}
 	EndGlobalSection
 EndGlobal

@@ -23,11 +23,11 @@ namespace WebApiForJWT.Services
             var audience = _configuration["Jwt:Audience"];
 
             var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
-            new Claim(ClaimTypes.Name, username),
-            new Claim(ClaimTypes.Role, role)
-        };
+            {
+                new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
+                new Claim(ClaimTypes.Name, username),
+                new Claim(ClaimTypes.Role, role)
+            };
 
             var securityKey =
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));

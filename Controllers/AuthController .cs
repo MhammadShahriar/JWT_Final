@@ -20,15 +20,9 @@ namespace WebApiForJWT.Controllers
         {
             if (username == "admin" && password == "1234")
             {
-                var token = _jwtService.GenerateToken(
-                    1,
-                    "admin",
-                    "Admin");
+                var token = _jwtService.GenerateToken(1, "admin", "Admin");
 
-                return Ok(new
-                {
-                    token = token
-                });
+                return Ok(new { token = token });
             }
 
             return Unauthorized(new

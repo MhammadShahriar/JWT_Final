@@ -19,9 +19,11 @@ namespace WebApiForJWT.Controllers
         [HttpPost("login")]
         public IActionResult Login(string username, string password)
         {
+            //Geting Id, Name, Role by username and password from database
+
             if (username == "admin" && password == "1234")
             {
-                var token = _jwtService.GenerateToken(1, "admin", "Admin");
+                var token = _jwtService.GenerateToken(1, "admin", "Admin");  //Sending Id, Name, Role
 
                 return Ok(new { token = token });
             }

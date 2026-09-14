@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApiForJWT.Models;
 using WebApiForJWT.Services;
 
 namespace WebApiForJWT.Controllers
@@ -17,11 +18,11 @@ namespace WebApiForJWT.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login(string username, string password)
+        public IActionResult Login([FromBody] LoginRequest request) 
         {
             //Geting Id, Name, Role by username and password from database
 
-            if (username == "admin" && password == "1234")
+            if (request.Username == "admin" && request.Password == "1234")
             {
                 var token = _jwtService.GenerateToken(1, "admin", "Admin");  //Sending Id, Name, Role
 
@@ -33,6 +34,24 @@ namespace WebApiForJWT.Controllers
                 message = "Invalid username or password"
             });
         }
+
+        //[HttpPost("login")]
+        //public IActionResult Login(string username, string password) // post : https://localhost:7265/api/Auth/login?username=admin&password=1234
+        //{
+        //    //Geting Id, Name, Role by username and password from database
+
+        //    if (username == "admin" && password == "1234")
+        //    {
+        //        var token = _jwtService.GenerateToken(1, "admin", "Admin");  //Sending Id, Name, Role
+
+        //        return Ok(new { token = token });
+        //    }
+
+        //    return Unauthorized(new
+        //    {
+        //        message = "Invalid username or password"
+        //    });
+        //}
 
         [HttpGet]
         [Authorize]

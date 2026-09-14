@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApiForJWT.Services;
 
@@ -28,6 +29,17 @@ namespace WebApiForJWT.Controllers
             return Unauthorized(new
             {
                 message = "Invalid username or password"
+            });
+        }
+
+        [HttpGet]
+        [Authorize]
+        public IActionResult GetUsers()
+        {
+            return Ok(new
+            {
+                message = "You are authorized to access this API.",
+                username = User.Identity?.Name
             });
         }
     }

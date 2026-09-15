@@ -22,7 +22,7 @@ namespace WebApiForJWT.Controllers
         {
             //Geting Id, Name, Role by username and password from database
 
-            if (request.Username == "admin" && request.Password == "1234")
+            if (request.Username == "admin" && request.Password == "123456")
             {
                 var token = _jwtService.GenerateToken(1, "admin", "Admin");  //Sending Id, Name, Role
 
